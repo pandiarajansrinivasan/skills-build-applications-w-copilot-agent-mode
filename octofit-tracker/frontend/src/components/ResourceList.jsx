@@ -7,17 +7,17 @@ function formatValue(value) {
   return value ?? '-'
 }
 
-export default function ResourceList({ collection, title, description, accent }) {
+export default function ResourceList({ collection, endpoint, title, description, accent }) {
   const [items, setItems] = useState([])
   const [state, setState] = useState('loading')
 
   useEffect(() => {
     let active = true
-    fetchCollection(collection).then((data) => {
+    fetchCollection(collection, endpoint).then((data) => {
       if (active) { setItems(data); setState('ready') }
     }).catch(() => active && setState('error'))
     return () => { active = false }
-  }, [collection])
+  }, [collection, endpoint])
 
   const columns = items.length ? Object.keys(items[0]).filter((key) => !['_id', '__v', 'createdAt', 'updatedAt'].includes(key)).slice(0, 5) : []
 
