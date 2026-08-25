@@ -1,0 +1,2 @@
+import ResourceList from './ResourceList.jsx'
+export default function Users() { return <ResourceList collection="users" title="Athletes" description="A privacy-minded directory of active students and their progress." accent="blue" /> }

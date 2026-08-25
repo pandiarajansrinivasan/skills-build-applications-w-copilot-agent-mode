@@ -1,0 +1,2 @@
+import ResourceList from './ResourceList.jsx'
+export default function Leaderboard() { return <ResourceList collection="leaderboard" title="Leaderboard" description="Celebrate consistency and friendly competition across Mergington High." accent="gold" /> }

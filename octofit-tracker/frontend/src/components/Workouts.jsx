@@ -1,0 +1,2 @@
+import ResourceList from './ResourceList.jsx'
+export default function Workouts() { return <ResourceList collection="workouts" title="Workout library" description="Short, approachable sessions matched to different goals and energy levels." accent="violet" /> }

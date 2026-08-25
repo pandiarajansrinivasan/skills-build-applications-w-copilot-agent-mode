@@ -1,0 +1,2 @@
+import ResourceList from './ResourceList.jsx'
+export default function Teams() { return <ResourceList collection="teams" title="Teams" description="Find your crew, see who is participating, and keep the momentum going." accent="teal" /> }

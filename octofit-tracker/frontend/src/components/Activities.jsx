@@ -1,0 +1,2 @@
+import ResourceList from './ResourceList.jsx'
+export default function Activities() { return <ResourceList collection="activities" title="Activity log" description="Every run, ride, walk, and strength session in one clear view." accent="coral" /> }
